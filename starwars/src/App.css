@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
 }
 .Header {
   color: #443e3e;
