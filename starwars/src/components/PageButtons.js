@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button } from './styles';
+import React from "react";
+import { Button } from "./styles";
 
 const PageButtons = ({nextPageHandler, previousPageHandler}) => {
     return (

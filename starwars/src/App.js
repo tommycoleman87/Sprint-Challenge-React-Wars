@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import axios from 'axios';
-import CharacterCard from './components/CharacterCard';
-import PageButtons from './components/PageButtons';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import axios from "axios";
+import CharacterCard from "./components/CharacterCard";
+import PageButtons from "./components/PageButtons";
 
 const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
+  // Try to think through what state you"ll need for this app before starting. Then build out
   // the state properties here.
   const [swChars, setSwChars] = useState([]);
-  const [api, setApi] = useState('https://swapi.co/api/people')
+  const [api, setApi] = useState("https://swapi.co/api/people")
   const [nextApi, setNextApi] = useState();
   const [previousApi, setPreviousApi] = useState();
   

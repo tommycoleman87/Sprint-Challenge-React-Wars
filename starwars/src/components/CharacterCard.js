@@ -1,12 +1,12 @@
 import React from "react";
 import { Card, Icon } from "semantic-ui-react";
-import { H4 } from './styles';
+import { H4 } from "./styles";
 
 const CharacterCard = ({ characters }) => (
-  <Card.Group style={{justifyContent: 'space-between'}}>
+  <Card.Group style={{justifyContent: "space-between"}}>
     {characters.map(character => {
       return (
-        <Card key={character.url} style={{backgroundColor: '#f7efe1', opacity: '.85'}}>
+        <Card key={character.url} style={{backgroundColor: "#f7efe1", opacity: ".85"}}>
           <Card.Content header={character.name} />
           <Card.Content>
             <H4>Birth year:</H4> {character.birth_year}
