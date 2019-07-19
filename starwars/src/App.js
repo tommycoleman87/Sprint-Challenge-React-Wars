@@ -10,6 +10,7 @@ const App = () => {
   const [swChars, setSwChars] = useState([]);
   const [api, setApi] = useState('https://swapi.co/api/people')
   const [nextApi, setNextApi] = useState();
+  const [previousApi, setPreviousApi] = useState();
   
   // Fetch characters from the star wars api in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
@@ -20,6 +21,7 @@ const App = () => {
       console.log(data);
       setSwChars(data.data.results);
       setNextApi(`${data.data.next}`);
+      setPreviousApi(`${data.data.previous}`);
     })
     .catch(error => {
       console.log(error)
@@ -30,12 +32,16 @@ const App = () => {
   const nextPageHandler = (event) => {
     setApi(nextApi);
   }
+
+  const previousPageHandler = (event) => {
+    setApi(previousApi);
+  }
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <PageButtons pageHandler={(event) => nextPageHandler(event)}/>
+      <PageButtons nextPageHandler={(event) => nextPageHandler(event)} previousPageHandler={(event) => previousPageHandler(event)}/>
       <CharacterCard characters={swChars} />
-      <PageButtons pageHandler={(event) => nextPageHandler(event)}/>
+      <PageButtons nextPageHandler={(event) => nextPageHandler(event)} previousPageHandler={(event) => previousPageHandler(event)}/>
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button } from './styles';
 
-const PageButtons = ({pageHandler}) => {
+const PageButtons = ({nextPageHandler, previousPageHandler}) => {
     return (
         <div>
-        <Button>Previous</Button>
-        <Button primary onClick={pageHandler}>Next</Button>
+        <Button onClick={previousPageHandler}>Previous</Button>
+        <Button primary onClick={nextPageHandler}>Next</Button>
         </div>
     )
     
