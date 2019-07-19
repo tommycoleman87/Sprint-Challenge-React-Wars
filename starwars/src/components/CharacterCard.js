@@ -6,7 +6,7 @@ const CharacterCard = ({ characters }) => (
   <Card.Group style={{justifyContent: 'space-between'}}>
     {characters.map(character => {
       return (
-        <Card key={character.url}>
+        <Card key={character.url} style={{backgroundColor: '#f7efe1', opacity: '.85'}}>
           <Card.Content header={character.name} />
           <Card.Content>
             <H4>Birth year:</H4> {character.birth_year}
